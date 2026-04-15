@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Sarli - Portfolio</title>
+    <link rel="shortcut icon" href="./img/imagen.png" type="image/x-icon">
+    <!-- Fuentes de Google: Outfit para dar un estilo moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/estilonuevo.css">
+</head>
+<body>      
+    <nav class="navbar bg-transparent fixed-top" data-bs-theme="dark" id="nav">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#" style="color: #00d4ff;">Thiago.dev</a>
+        <button class="btn custom-btn shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="padding: 8px 20px; font-weight: bold;">
+          Contactame 
+        </button>
+      </div>
+    </nav>
+    
+    <!-- El Offcanvas ahora está fuera de la barra de navegación para evitar recortes de visualización -->
+    <div class="offcanvas offcanvas-end text-bg-dark custom-offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel" style="color: #00d4ff;">Contacto y Enlaces</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mb-4">
+          <li class="nav-item">
+            <a class="nav-link fs-5 text-light" href="https://github.com/thiaguitosprogramador" target="_blank">
+              💻 Visita mi GitHub
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Formulario de Contacto integrado y funcional -->
+        <div class="formulario glass-panel p-4 mt-auto mb-4">
+          <h6 class="mb-3 fw-bold text-center">¡Envíame un mensaje directo!</h6>
+          
+          <!-- ATENCIÓN: Reemplaza "tu_correo@gmail.com" con tu correo real de Gmail donde quieres recibir los mensajes -->
+          <form action="https://formsubmit.co/tu_correo@gmail.com" method="POST">
+            <div class="mb-3">
+              <input type="text" name="name" class="form-control custom-input" placeholder="Tu Nombre o Empresa" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control custom-input" placeholder="Tu Email de Contacto" required>
+            </div>
+            <div class="mb-3">
+              <textarea name="message" class="form-control custom-input" rows="4" placeholder="¿En qué te puedo ayudar o qué proyecto tienes en mente?" required></textarea>
+            </div>
+            
+            <!-- Opciones para evitar spam y recarga. Puedes dejarlo así -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="¡Nuevo mensaje de tu Portafolio!">
+            
+            <!-- Opcional: una web adonde ir cuando ponen "enviar", lo dejamos vacio o borramos para el cartel por defecto -->
+            <button type="submit" class="btn custom-btn w-100 fw-bold">Enviar Mensaje ✨</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Sección Principal (Hero) -->
+    <header class="hero-section d-flex align-items-center justify-content-center flex-column text-center px-3">
+        <p class="greeting mb-2">¡Hola! Soy</p>
+        <h1 class="main-title">Thiago Mauricio Sarli</h1>
+        <h3 class="subtitle mt-3 col-md-8 mx-auto">
+            Desarrollador <b>Full Stack</b> y Técnico en Computación. Transformando grandes ideas en soluciones tecnológicas.
+        </h3>
+        <p class="description mt-3 col-md-6 mx-auto text-light opacity-75">
+            Especialista en tecnología enfocada en resultados: desde diseño interactivo (HTML/CSS/JS) y bases de datos, hasta reparación y mantenimiento complejo de hardware, actualmente estoy practicando vibecoding.
+        </p>
+    </header>
+
+    <!-- Sección de Información (Cartas o Cards) -->
+    <section class="container mb-5 py-5 flex-grow-1">
+        <h2 class="section-title mb-5 text-center">Mis Habilidades y Propósitos</h2>
+        <div class="row g-4 justify-content-center pt-3">
+            
+            <!-- Carta 1: Desarrollo -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="glass-card h-100 p-4 d-flex flex-column">
+                    <div class="card-icon mb-3">💻</div>
+                    <h5 class="card-title fw-bold">Desarrollo Web Integral</h5>
+                    <p class="card-text text-light opacity-75 flex-grow-1">
+                        Creo aplicaciones web y sitios dinámicos enfocados en la experiencia del usuario. Manejo el front-end con <b>Bootstrap e interfaces modernas</b>, y el back-end robusto con <b>PHP y bases de datos MySQL</b>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Carta 2: Hardware -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="glass-card h-100 p-4 d-flex flex-column">
+                    <div class="card-icon mb-3">🔧</div>
+                    <h5 class="card-title fw-bold">Hardware y Redes</h5>
+                    <p class="card-text text-light opacity-75 flex-grow-1">
+                        Más allá del código, entiendo las máquinas desde su interior. Realizo <b>armado, reparación y diagnóstico de PCs</b>, junto con diseño, configuración y mantenimiento de <b>redes locales</b>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Carta 3: Proyectos o Comunidad -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="glass-card h-100 p-4 d-flex flex-column">
+                    <div class="card-icon mb-3">🚀</div>
+                    <h5 class="card-title fw-bold">Proyectos Abiertos y Comunidad</h5>
+                    <p class="card-text text-light opacity-75 flex-grow-1">
+                        Creo fielmente en la retroalimentación y la documentación constante de todo lo que hago. Puedes explorar mis proyectos activos, contribuciones y prácticas en mi <a href="https://github.com/thiaguitosprogramador" class="text-info text-decoration-none fw-bold" target="_blank">perfil público de GitHub</a>.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="text-center py-4 glass-footer mt-auto w-100">
+        <p class="mb-0 text-light opacity-50">&copy; 2024 Thiago Mauricio Sarli. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

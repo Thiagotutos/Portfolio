@@ -1,0 +1,190 @@
+/* Importación de Fuentes de Google - Outfit (Moderna, geométrica y amigable) */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background: #0f0c29; /* Fallback */
+    /* Fondo con un degradado púrpura oscuro y elegante, menos brillante y muy cómodo a la vista */
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #150f24 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Animación fluida para el fondo */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+#nav {
+    backdrop-filter: blur(15px); /* Efecto cristalino */
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(2, 0, 36, 0.6) !important; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section (Sección Principal Arriba) */
+.hero-section {
+    min-height: 55vh;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.greeting {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #00d4ff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: textoMulticolor 6s infinite;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    /* Añadida la animación flotante y recuperada la animación multicolor */
+    animation: float 6s ease-in-out infinite, textoMulticolor 6s infinite;
+}
+
+/* Animación recuperada de texto multicolor para el título */
+@keyframes textoMulticolor {
+   0% { color: aliceblue; }
+   25% { color: purple; }
+   50% { color: #00d4ff; }
+   75% { color: green; }
+   100% { color: aliceblue; }
+}
+
+/* Animación sutil de levitación para el texto principal */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Detalles resaltados como coral */
+b {
+    color: coral;
+    font-weight: 800;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+/* Estilo Glassmorphism (Cristal) para las Cartas */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Interacción al pasar el mouse sobre la carta */
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.card-icon {
+    font-size: 3.5rem;
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: white;
+}
+
+/* Modificaciones Offcanvas y Formulario lateral */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Offcanvas de tamaño personalizado */
+.custom-offcanvas {
+    width: 100% !important; /* Teléfonos: 100% del ancho */
+}
+
+@media (min-width: 768px) {
+    .custom-offcanvas {
+        width: 50% !important; /* PC y tablets grandes: 50% de la pantalla */
+    }
+}
+
+.custom-input {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 12px;
+    padding: 12px 15px;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.custom-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 212, 255, 0.25) !important;
+    border-color: #00d4ff !important;
+}
+
+.custom-btn {
+    background: linear-gradient(90deg, coral 0%, #ff4b2b 100%);
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 12px;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.custom-btn:hover {
+    opacity: 0.9;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Pie de página */
+.glass-footer {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(2, 0, 36, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsividad general para móviles */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    .hero-section {
+        padding-top: 120px;
+    }
+}
